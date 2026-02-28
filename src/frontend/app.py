@@ -47,7 +47,7 @@ if user_prompt:
         response.raise_for_status()
         response_json = response.json()
         assistant_response = response_json.get("answer", "(No response)")
-        tool_used = response-response_json.get("tool_used", "N/A")
+        tool_used = response_json.get("tool_used", "N/A")
         rationale = response_json.get("rationale", "N/A")
         sources = response_json.get("sources", [])
     except Exception as e:
