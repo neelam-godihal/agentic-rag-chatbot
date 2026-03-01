@@ -1,6 +1,7 @@
 Docker setup commands:
 
-Building docker image: docker build -t ragbot:latest .
+Building docker image: 
+docker build -t ragbot:latest .
 
 Running the image:
 
