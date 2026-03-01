@@ -1,0 +1,10 @@
+Docker setup commands:
+
+Building docker image: docker build -t ragbot:latest .
+
+Running the image:
+
+docker run -p 8000:8000 -p 8501:8501 --env-file .env ragbot:latest
+
+To pass an env variable specifically:
+docker run -p 8000:8000 -p 8501:8501 -e GROQ_API_KEY=your_groq_api_key ragbot:latest
