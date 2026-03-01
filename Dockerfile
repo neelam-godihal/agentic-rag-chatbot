@@ -24,13 +24,13 @@ RUN chmod +x start.sh
 EXPOSE 8000 8501
 
 # Set environment variables (can be overridden at runtime)
-# ENV GROQ_API_KEY="your_groq_api_key"
-# ENV DOCUMENTS_DIR="/app/docs_dir"
-# ENV VECTOR_STORE_DIR="/app/doc_vector_store"
-# ENV COLLECTION_NAME="document_collection"
-# ENV MODEL_NAME="llama-3.3-70b-versatile"
-# ENV MODEL_TEMPERATURE=0.0
-# ENV CHAT_ENDPOINT_URL="http://localhost:8000/chat/answer"
+ENV GROQ_API_KEY="your_groq_api_key"
+ENV DOCUMENTS_DIR="/app/docs_dir"
+ENV VECTOR_STORE_DIR="/app/doc_vector_store"
+ENV COLLECTION_NAME="document_collection"
+ENV MODEL_NAME="llama-3.3-70b-versatile"
+ENV MODEL_TEMPERATURE=0.0
+ENV CHAT_ENDPOINT_URL="http://localhost:8000/chat/answer"
 
 # run all services through the start up script
 CMD ["/app/start.sh"]
